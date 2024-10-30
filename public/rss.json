@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Trade Companion",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000/rss.json",
+    "description": "Your SaaS Description",
+    "author": {},
+    "items": [
+        {
+            "id": "http://localhost:3000/blog/changelog/est-non-aequor-edidit-iuvat",
+            "content_html": "\n## Fecerat avis invenio mentis\n\nLorem markdownum signis vidi quisquis saepe inani inter animam laceras nequiquam\ncastos cumque dum poste pede, **soliti et** eras. Cornua utendum. Ne dignus\nopacae? Moles percussis, redimitus equi quercus haurit perque *aras*; humo!\nDigessit Famemque membris vestrum [sua adveniens](http://erit.net/luctus.php)\ndeserta, et me cum cum dicuntur et ignes.\n\n    var xmp_duplex = boolean + alu_unmount_tween - newline;\n    var matrix_http_plain = facebook;\n    rom = risc_flops + market + 2 + reimage_c_mca;\n\n## Parilesque duae meritis\n\nSuum spes medio faciunt miserarum artisque. Honor amplectique crescunt saepius\ncavis esse saepe laetabile modo. Fontis relinquit titulum est victa mundi!\n\n## Orbem dare\n\nMore cingo concipit cumque armenta. Secuta quare profundi damni erigimur effugit\nfacta ipsa, videt videt. Conantem et **campos animos usquam** ut munus erat\naudito, e!\n\n> Talia ponit corpora Philemon. Volant pone dicta, fugerent hanc; trahunt plus\n> **cinxit agendo**, Sedit, animum, molli spargere. Perterrita et bella Tiresia\n> tanta auctor, colatur **nigro** externa. Stamina nunc bis *longeque* cornua.\n\n## Cantat sequentes et illi opertos Cycno\n\nPer inque Pallade cuspide errabat. Est dolor excitus ultorem avertere, numero et\nMinos pater flamine, ictu tune Phylius.\n\nDitem est qui Scythicis erubuit suae, qui nunc tacito aequare auras. Suas erat\ncubitoque esse, volventem quae, fera tinxi villo ita. Addit hic sine at orbe ut\nsanesque intravit pudore nullisque Canens, ait aut. Parabat Pittheia Pan cibus\net perque inquit grave suae coniunx cura matris undaeque et stagni et.\n",
+            "url": "http://localhost:3000/blog/changelog/est-non-aequor-edidit-iuvat",
+            "title": "Est non aequor edidit iuvat",
+            "summary": "Lorem markdownum signis vidi quisquis saepe inani inter animam laceras nequiquam castos cumque dum poste pede, soliti et eras",
+            "image": "http://localhost:3000/assets/images/posts/est-non-aequor.webp",
+            "date_modified": "2021-02-12T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "http://localhost:3000/blog/changelog/lorem-ipsum",
+            "content_html": "\n\n## Coniugis erat carmen capillis\n\nLorem markdownum **stetit distuleratque silva** cum inquit; sub cum pollice,\npro. Nymphe regimen numerem Astreus crine cum animam, contigerant terras iussa\nrara. Flectere lapillos dolor nec Hesperio, sola impediebat herbis; quo\nsolidissima fuit.\n\n> Ingeniis arte ignem, non sors hac ne in modo vasti ad tamquam immo Elei\n> socios; nullius recepta; abest. Cum hoc aestus nocens? Annum iam, hunc unda\n> misit, ignavi aevum. Me maerenti gaudia; de mihi frondes: reprensa posco:\n> Achivae. Sed loqui quo umquam in et lassa: per erat.\n\nNovi membra angi media armis non dubites famulas amicitur interitura telae; et\nvoce portus cuspidis? Tulisset ut haec una amoris mirum! Tum nec exaudi olivae\net inquit ne tamen roganti adsuetaque cum se [viri](http://rhodopeius.com/), ire\nimago utrimque ratos bracchia.\n\n## Missa liquidas in tepido ne facit\n\nMihi illius et illa, terras Cadmus [patres quas](http://erat-ubi.io/fore.html),\nalta. Loquiturque verba ossibus; satis spectat **fallis**, terra Attis tempora.\nMihi faveant remoratur Scorpius curvique floresque, hosti in ait parenti recto\nest tua lucis miraturus ut pacem. Callida arma vincant legi hoc ullam **postquam\ncorpore candor**. Dea inplevit, ait Invidiam nascitur navis Aeneas partes tanti\nnati relinquo?\n\n```\nnui_engine = enterprise;\nshift(topology_kibibyte.ict_mnemonic_tftp(passive_hardware + column, wi(\n        leaderboard, wamp), fileData + scrollYoutubePower), click(\n        module_bus_ata), imap(\n        burnOpticalTransfer.characterMemoryMeta.editorPiracyLaser(\n        minicomputerVideo, 85, topologyRecord)));\nengine_speed_meta.trinitronIsaSlashdot += scalableCycle;\n```\n\nPars dapibus, amplexus urnam: remisit veniente adplicor in inque. **Sceptra** et\n**si lacrimasque** admonitu qui hausit longum contigerant neve, ut limina\ncedere. Abantiades fictos, amat inque Aglauros at sub age, Prytaninque.\n\nComaeque dorso; octavo annum moventem sed; lignum regere in summa; vina erat,\ncontra. Res ignoscas admovet **functi rediturum** ignea idque deferri, ferrumque\net! Frustraque tam modo Macareus terrarumque adhuc, morae haec Acmona, prima\nagros iuvenes noctem, umbra, fratrum.\n",
+            "url": "http://localhost:3000/blog/changelog/lorem-ipsum",
+            "title": "Lorem Ipsum",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "image": "http://localhost:3000/assets/images/posts/lorem-ipsum.webp",
+            "date_modified": "2021-01-12T00:00:00.000Z",
+            "author": {}
+        }
+    ]
+}

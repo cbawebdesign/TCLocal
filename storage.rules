@@ -1,0 +1,30 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function getUserId() {
+        return request.auth.uid;
+    }
+
+    function getOrganization(uid) {
+        return firestore.get(/databases/(default)/documents/organizations/$(uid));
+    }
+
+    function isImage(resource) {
+        return resource.contentType.matches('image/.*')
+    }
+
+    match /organizations/{organizationId}/{fileName=**} {
+      allow read: if getUserId() in getOrganization(organizationId).data.members;
+      allow create: if getUserId() in getOrganization(organizationId).data
+      .members && isImage(request.resource);
+      allow delete: if getUserId() in getOrganization(organizationId).data
+      .members && isImage(resource);
+    }
+
+    match /profiles/{userId}/{fileName=**} {
+      allow read: if request.auth != null;
+      allow create: if getUserId() == userId && isImage(request.resource);
+      allow delete: if getUserId() == userId && isImage(resource)
+    }
+  }
+}
