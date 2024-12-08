@@ -115,7 +115,7 @@ export default function DashboardDemo() {
           Welcome to your Trade Companion Dashboard
         </h1>
         <p className="text-center max-w-prose text-lg italic">
-          Manage your watchlists and monitor your trades below.
+          Manage your watchlists and monitor your trades below
         </p>
 
         {/* Watchlist Dropdown */}
