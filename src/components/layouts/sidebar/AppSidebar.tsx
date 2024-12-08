@@ -2,94 +2,55 @@ import { useContext } from 'react';
 import classNames from 'clsx';
 import Link from 'next/link';
 import { useAuth } from 'reactfire';
-import { Trans } from 'next-i18next';
 
 import {
   ArrowLeftCircleIcon,
   ArrowRightCircleIcon,
+  HomeIcon,
+  UserGroupIcon,
+  BellIcon,
+  Cog6ToothIcon,
+  UserIcon
 } from '@heroicons/react/24/outline';
 
 import AppSidebarNavigation from './AppSidebarNavigation';
-import Sidebar, { SidebarContent } from '~/core/ui/Sidebar';
-import OrganizationsSelector from '~/components/organizations/OrganizationsSelector';
 import { SidebarContext } from '~/core/contexts/sidebar';
+import OrganizationsSelector from '~/components/organizations/OrganizationsSelector';
 import ProfileDropdown from '~/components/ProfileDropdown';
-
-import { Tooltip, TooltipContent, TooltipTrigger } from '~/core/ui/Tooltip';
 import { useUserSession } from '~/core/hooks/use-user-session';
 import { useCurrentOrganization } from '~/lib/organizations/hooks/use-current-organization';
 import SubscriptionStatusBadge from '~/components/subscriptions/SubscriptionStatusBadge';
 
-const AppSidebar = () => {
+const AppTopbar = () => {
   const ctx = useContext(SidebarContext);
 
   return (
-    <Sidebar collapsed={ctx.collapsed}>
-      <SidebarContent className={'mt-4'}>
-        <OrganizationsSelector displayName={!ctx.collapsed} />
-      </SidebarContent>
+    <header className="fixed top-0 left-0 w-full bg-background z-50">
+      <div className="w-full bg-background flex items-center justify-between px-4 py-2 shadow">
+        {/* Main Container with even spacing */}
+        <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
+          {/* Left Section */}
+          <div className="flex-shrink-0">
+            <OrganizationsSelector displayName={!ctx.collapsed} />
+          </div>
 
-      <SidebarContent className={`h-[calc(100%-160px)] overflow-y-auto`}>
-        <AppSidebarNavigation />
-      </SidebarContent>
+          {/* Center Navigation - Now using space-x for even spacing */}
+          <div className="flex-grow flex justify-center items-center px-4">
+            <div className="flex items-center space-x-8">
+              <AppSidebarNavigation />
+            </div>
+          </div>
 
-      <div className={'absolute bottom-0 w-full bg-background'}>
-        <SidebarContent>
-          <ProfileDropdownContainer collapsed={ctx.collapsed} />
-        </SidebarContent>
+          {/* Right Section - Profile and Status */}
+          <div className="flex-shrink-0 flex items-center space-x-4">
+            <StatusBadge />
+            <ProfileDropdownContainer collapsed={ctx.collapsed} />
+          </div>
+        </div>
       </div>
-    </Sidebar>
+    </header>
   );
 };
-
-export default AppSidebar;
-
-function AppSidebarFooterMenu() {
-  const { collapsed, setCollapsed } = useContext(SidebarContext);
-
-  return <CollapsibleButton collapsed={collapsed} onClick={setCollapsed} />;
-}
-
-function CollapsibleButton({
-  collapsed,
-  onClick,
-}: React.PropsWithChildren<{
-  collapsed: boolean;
-  onClick: (collapsed: boolean) => void;
-}>) {
-  const className = classNames(
-    `bg-background absolute -right-[10px] bottom-[30px] cursor-pointer block`,
-  );
-
-  const iconClassName =
-    'bg-background text-gray-300 dark:text-gray-600 h-5 w-5';
-
-  return (
-    <Tooltip>
-      <TooltipTrigger
-        className={className}
-        aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-        onClick={() => onClick(!collapsed)}
-      >
-        <ArrowRightCircleIcon
-          className={classNames(iconClassName, {
-            hidden: !collapsed,
-          })}
-        />
-
-        <ArrowLeftCircleIcon
-          className={classNames(iconClassName, {
-            hidden: collapsed,
-          })}
-        />
-      </TooltipTrigger>
-
-      <TooltipContent sideOffset={20}>
-        <Trans i18nKey={'common:expandSidebar'} />
-      </TooltipContent>
-    </Tooltip>
-  );
-}
 
 function ProfileDropdownContainer(props: { collapsed: boolean }) {
   const userSession = useUserSession();
@@ -97,21 +58,17 @@ function ProfileDropdownContainer(props: { collapsed: boolean }) {
 
   return (
     <div
-      className={classNames('flex flex-col space-y-4', {
-        ['py-4']: !props.collapsed,
-        ['py-6']: props.collapsed,
+      className={classNames('flex items-center', {
+        'py-2': !props.collapsed,
+        'py-3': props.collapsed,
       })}
     >
-      <StatusBadge />
-
       <ProfileDropdown
         displayName={!props.collapsed}
-        className={'w-full'}
+        className="w-full"
         user={userSession?.auth}
         signOutRequested={() => auth.signOut()}
       />
-
-      <AppSidebarFooterMenu />
     </div>
   );
 }
@@ -124,19 +81,17 @@ function StatusBadge() {
     subscription?.status ?? 'free',
   );
 
-  // if the organization has an active subscription
-  // we do not show the subscription status badge
   if (isActive || !subscription) {
     return null;
   }
 
-  const href = `/settings/subscription`;
+  const href = '/settings/subscription';
 
-  // in all other cases we show the subscription status badge
-  // which will show the subscription status and a link to the subscription page
   return (
     <Link href={href}>
       <SubscriptionStatusBadge subscription={subscription} />
     </Link>
   );
 }
+
+export default AppTopbar;

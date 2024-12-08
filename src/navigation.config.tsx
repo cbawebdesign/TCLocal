@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   UserIcon,
 } from '@heroicons/react/24/outline';
+import { BellIcon, CogIcon, ViewIcon } from 'lucide-react';
 
 type Divider = {
   divider: true;
@@ -35,17 +36,27 @@ type NavigationConfig = {
 const NAVIGATION_CONFIG: NavigationConfig = {
   items: [
     {
-      label: 'common:dashboardTabLabel',
+      label: 'common:watchlistlabel',
       path: configuration.paths.appHome,
       Icon: ({ className }: { className: string }) => {
-        return <Squares2X2Icon className={className} />;
+        return <ViewIcon className={className} />;
       },
     },
-   
     {
-      label: 'common:settingsTabLabel',
-      collapsible: false,
-      children: [
+      label: 'common:alertslabel',
+      path: configuration.paths.appHome,
+      Icon: ({ className }: { className: string }) => {
+        return <BellIcon className={className} />;
+      },
+    },
+    {
+      label: 'common:configlabel',
+      path: configuration.paths.appHome,
+      Icon: ({ className }: { className: string }) => {
+        return <CogIcon className={className} />;
+      },
+    },
+    
         {
           label: 'common:profileSettingsTabLabel',
           path: configuration.paths.settings.profile,
@@ -54,9 +65,8 @@ const NAVIGATION_CONFIG: NavigationConfig = {
           },
         },
     
-     
-      ],
-    },
+  
+   
   ],
 };
 

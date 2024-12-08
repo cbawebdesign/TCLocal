@@ -1,5 +1,10 @@
 {
   "dashboardTabLabel": "Dashboard",
+  "watchlistlabel": "Watchlist",
+  "alertslabel": "Alerts",
+  "configlabel": "Config",
+
+
   "organizationSettingsTabLabel": "Organization",
   "tasksTabLabel": "Tasks",
   "settingsTabLabel": "Settings",
@@ -29,7 +34,7 @@
   "getStarted": "Get Started",
   "contactUs": "Contact Us",
   "continue": "Continue",
-  "yourOrganizations": "Your Organizations",
+  "yourOrganizations": "Your Profiles",
   "skip": "Skip",
   "roles": {
     "owner": {
