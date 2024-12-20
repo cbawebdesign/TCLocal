@@ -37,7 +37,7 @@ const NAVIGATION_CONFIG: NavigationConfig = {
   items: [
     {
       label: 'common:watchlistlabel',
-      path: configuration.paths.appHome,
+      path: '/watchlist',
       Icon: ({ className }: { className: string }) => {
         return <ViewIcon className={className} />;
       },
@@ -51,7 +51,7 @@ const NAVIGATION_CONFIG: NavigationConfig = {
     },
     {
       label: 'common:configlabel',
-      path: configuration.paths.appHome,
+      path: '/config',
       Icon: ({ className }: { className: string }) => {
         return <CogIcon className={className} />;
       },

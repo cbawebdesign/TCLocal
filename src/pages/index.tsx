@@ -84,7 +84,7 @@ function Index() {
             }
             width={2688}
             height={1824}
-            src={`/assets/images/bannershap.png`}
+            src={`/assets/images/trading.jpg`}
             alt={`App Image`}
           />
         </div>
