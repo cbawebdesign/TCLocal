@@ -38,6 +38,7 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@mdx-js/mdx": "^3.0.1",
+    "@microsoft/signalr": "^8.0.7",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
@@ -72,6 +73,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-i18next": "^15.0.1",
+    "react-icons": "^5.5.0",
     "react-top-loading-bar": "^2.3.1",
     "reactfire": "^4.2.3",
     "sonner": "^1.5.0",

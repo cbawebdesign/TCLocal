@@ -5,7 +5,7 @@ const LogoImage: React.FC<{
   className?: string;
   style?: CSSProperties;
 }> = ({ className, style }) => { // Add style here
-  const logoUrl = 'https://firebasestorage.googleapis.com/v0/b/tradecompanion-71fd4.appspot.com/o/Screenshot%20at%20Oct%2027%2018-17-29.png?alt=media&token=4a42e933-2f04-48d7-92db-e3f68d8a88e1'; // Replace with your actual image URL
+  const logoUrl = 'https://firebasestorage.googleapis.com/v0/b/test7-8a527.appspot.com/o/Screenshot_at_Mar_03_11-22-37-removebg-preview.png?alt=media&token=1ed97138-6872-41e9-9e87-56a2304bb104'; // Replace with your actual image URL
 
   return (
     <img
