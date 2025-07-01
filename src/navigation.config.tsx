@@ -36,19 +36,20 @@ type NavigationConfig = {
 const NAVIGATION_CONFIG: NavigationConfig = {
   items: [
     {
-      label: 'common:watchlistlabel',
-      path: '/watchlist',
-      Icon: ({ className }: { className: string }) => {
-        return <ViewIcon className={className} />;
-      },
-    },
-    {
       label: 'common:alertslabel',
       path: configuration.paths.appHome,
       Icon: ({ className }: { className: string }) => {
         return <BellIcon className={className} />;
       },
     },
+    {
+      label: 'common:watchlistlabel',
+      path: '/watchlist',
+      Icon: ({ className }: { className: string }) => {
+        return <ViewIcon className={className} />;
+      },
+    },
+
     {
       label: 'common:configlabel',
       path: '/config',
